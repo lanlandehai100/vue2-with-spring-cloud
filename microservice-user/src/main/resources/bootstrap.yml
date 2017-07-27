@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      discovery:
+        enabled: true                                 
+        serviceId: microservice-config-server 
+      profile: dev
+      label: master
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/microservice-user
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      minIdle: 1
+      maxIdle: 2
+      initialSize: 1
+      timeBetweenEvictionRunsMillis: 3000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'ZTM' FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+mybatis:
+  mapperLocations: classpath*:/mybatis/*.xml
+  typeAliasesPackage: com.taoweilai.user.modules
+logging:
+  level:
+    root: INFO
+    com.taoweilai.user.modules: DEBUG
+  
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8760/eureka/   #http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://discovery:8760/eureka/
+management:
+  security:
+    enabled: false

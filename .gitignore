@@ -1,0 +1,9 @@
+
+.metadata/.lock
+.metadata/.log
+.metadata/.mylyn/repositories.xml.zip
+.metadata/.plugins/org.eclipse.core.resources/.projects/microservice-config/.indexes/properties.index
+.metadata/.plugins/org.eclipse.core.resources/.projects/microservice-config/.markers.snap
+.metadata
+.project
+.svn/

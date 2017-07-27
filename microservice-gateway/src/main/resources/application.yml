@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: gateway
+server:
+  port: 8150
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8760/eureka/   #http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://discovery:8760/eureka/
