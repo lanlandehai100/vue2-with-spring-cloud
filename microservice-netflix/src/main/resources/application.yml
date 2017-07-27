@@ -1,9 +1,8 @@
+server:
+  port: 8760                    # 指定该Eureka实例的端口
 ---
 spring:
   profiles: discovery
-server:
-  port: 8760                    # 指定该Eureka实例的端口
-
 eureka:
   instance:
     hostname: 127.0.0.1         # 指定该Eureka实例的主机名
