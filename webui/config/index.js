@@ -23,25 +23,25 @@ module.exports = {
 	},
 	dev  : {
 		env               : require('./dev.env'),
-		port              : 11126,
+		port              : 11127,
 		autoOpenBrowser   : true,
 		assetsSubDirectory: 'static',
 		assetsPublicPath  : '/',
 		proxyTable        : {
 			'/webapi'  : {
-				target      : 'http://gateway:8150',
+				target      : 'http://127.0.0.1:8780',
 				changeOrigin: true,
 				pathRewrite : {
 					'^/webapi': ''
 				}
-			// },
-			// '/webapiQiniu': {
+			}
+			// ,'/slsAdminQiniu': {
 			// 	target      : '//up-z2.qiniu.com',
 			// 	changeOrigin: true,
 			// 	pathRewrite : {
-			// 		'^/webapiQiniu': ''
+			// 		'^/slsAdminQiniu': ''
 			// 	}
-			}
+			// }
 		},
 		// CSS Sourcemaps off by default because relative paths are "buggy"
 		// with this option, according to the CSS-Loader README

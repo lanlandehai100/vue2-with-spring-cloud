@@ -7,3 +7,13 @@
 .metadata
 .project
 .svn/
+build/
+bin/
+.settings/
+.classpath
+.gradle/
+/dist/
+node_modules/
+.recommenders/
+webui/dist/
+microservice-webui/src/main/resources/static/dist/

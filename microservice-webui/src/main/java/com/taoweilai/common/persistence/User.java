@@ -31,6 +31,8 @@ public class User extends BaseEntity<User>{
     private Double score;
     
     private Integer rank;
+    
+    private String token;
 
 	public String getLoginName() {
 		return loginName;
@@ -142,6 +144,14 @@ public class User extends BaseEntity<User>{
 
 	public void setRank(Integer rank) {
 		this.rank = rank;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
     
     

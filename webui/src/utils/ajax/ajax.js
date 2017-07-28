@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+var qs = require('qs');
 
 Vue.use(VueAxios, axios);
 
@@ -49,8 +50,8 @@ export default function ({
 	}
 
 	if (api_flag === true) {
-		options[type === 'get' ? 'params' : 'data'] = data;
-
+		options[type === 'get' ? 'params' : 'data'] = qs.stringify(data);
+	//	options['params'] = data;
 		// 分发显示加载样式任务
 		this.$store.dispatch('show_loading');
 

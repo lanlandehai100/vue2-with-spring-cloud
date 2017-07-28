@@ -10,7 +10,7 @@ spring:
 logging:
   level:
     root: INFO
-    com.taoweilai.taogaokao.modules: DEBUG
+    com.taoweilai.modules: DEBUG
     
 eureka:
   instance:

@@ -88,7 +88,6 @@ export default {
 			this.formOffset.left = (parseInt(this.winSize.width) / 2 - 175) + 'px';
 			this.formOffset.top  = (parseInt(this.winSize.height) / 2 - 178) + 'px';
 		},
-
 		onLogin(ref, type) {
 			if (type && this.register === true) {
 				this.$message.error('请输入确认密码');
