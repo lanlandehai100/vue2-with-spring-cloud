@@ -7,27 +7,40 @@ Vue.use(Router);
 
 import {Home, Content} from 'layout/';
 import {Login} from 'views/';
+import tHome from 'views/modules/home/taoweilai/';
 
 import Adv from './adv/';
 import Function from './function/';
 import Demo from './demo/';
 import components from './components/';
 
-
 export default new Router({
 	routes: [
+		// {
+		// 	path  : '/',
+		// 	name  : 'Hello',
+		// 	hidden: true,
+		// 	redirect(to){
+		// 		return 'login';
+		// 	}
+		// }, {
+		// 	path     : '/login',
+		// 	name     : '登录',
+		// 	hidden   : true,
+		// 	component: Login
+		// },
 		{
-			path  : '/',
-			name  : 'Hello',
-			hidden: true,
+			path : '/',
+			name :	'微服务',
+			hidden : true,
 			redirect(to){
-				return 'login';
+				return 'taoweilai';
 			}
 		}, {
-			path     : '/login',
-			name     : '登录',
-			hidden   : true,
-			component: Login
+			path : '/taoweilai',
+			name : '淘未来',
+			hidden: true,
+			component:tHome
 		},
 		Function,
 		Demo,
