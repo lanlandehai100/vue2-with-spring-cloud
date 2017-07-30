@@ -165,14 +165,240 @@
         <div class="clear"></div>
     </div>
 </nav>
+<el-carousel height="440px">
+    <el-carousel-item v-for="item in bannerPic" :key="item">
+    <img v-bind:src="item"  width="auto" height="440" alt="" />
+    </el-carousel-item>
+</el-carousel>
+
+<div class="model_title">
+	<h1 class="top">精品服务 QUALITY SERVICE</h1>
+	<h1 class="top2">----------------  智能系统+人工服务，让志愿变得更轻松  ----------------</h1>
+</div>
+<section class="importBase">
+	<div class="imports">
+		<ul>
+			<li class="frist">
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div><img src="../../../../assets/images/01.fw.png" style="width:100%;height:100%"></div>
+					</div>
+					<div class="back" style="background:#3FC4FD;">
+						<div class="com-m">
+							<p>1.你好</p>
+							<p>2.好啊</p>
+							<p>3.你好</p>
+							<a>查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</li>
+			<li>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div><img src="../../../../assets/images/02.fw.png" style="width:100%;height:100%"></div>
+					</div>
+					<div class="back" style="background:#FFB921;">
+						<div class="com-m">
+							<p>1.你好</p>
+							<p>2.好啊</p>
+							<p>3.你好</p>
+							<a>查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</li>
+			<li>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div><img src="../../../../assets/images/03.fw.png" style="width:100%;height:100%"></div>
+					</div>
+					<div class="back" style="background:#FE6B5A;">
+						<div class="com-m">
+							<p>1.你好</p>
+							<p>2.好啊</p>
+							<p>3.你好</p>
+							<a>查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</li>
+			<li>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div><img src="../../../../assets/images/04.fw.png" style="width:100%;height:100%"></div>
+					</div>
+					<div class="back" style="background:#09C899;">
+						<div class="com-m">
+							<p>1.你好</p>
+							<p>2.好啊</p>
+							<p>3.你好</p>
+							<a>查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</li>
+			<li>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div><img src="../../../../assets/images/05.fw.png" style="width:100%;height:100%"></div>
+					</div>
+					<div class="back" style="background:#5ED15F;">
+						<div class="com-m">
+							<p>1.你好</p>
+							<p>2.好啊</p>
+							<p>3.你好</p>
+							<a>查看详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<div class="model_title">
+	<h1 class="top">权威资讯  AUTHORITATIVE INFORMATION</h1>
+	<h1 class="top2">----------------  七分高考，三分志愿，给您最权威的参考资讯  ---------------</h1>
+</div>
+<section class="indexNews">
+    <div class="notice">
+		<div class="tab-hd">
+            <ul class="tab-nav">
+                <li class="frist active"><a href="" target="_blank">高考咨询</a></li>
+                <li><a href="" target="_blank">高考备战</a></li>
+                <li><a href="" target="_blank">国内大学</a></li>
+                <li><a href="" target="_blank">国外留学</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="tab-bd active">
+            <ul>
+                <li><span><b>12</b><br/><em>2017.01</em></span>
+                <a href="" title="志愿填报选专业还是选学校？别傻了，你应该选的是“抱大腿”！" target="_blank">志愿填报选专业还是选学校？别傻了，你应该选的是“抱大腿”！</a>
+                <p>每年志愿填报，上好学校的好专业无疑是很多考生和家长最想要的结果，但是在分数优势不足的情况下，鱼与熊掌如何兼得，成为90%考生和家长最为纠结的问题。。。</p></li>
+                <li><span><b>04</b><br/><em>2017.01</em></span>
+                <a href="" title="淘高考 | 2017年福建省高考人数比去年增加近1.32万人！近三年录取情况一览！" target="_blank">淘高考 | 2017年福建省高考人数比去年增加近1.32万人！近三年录取情况一览！</a>
+                <p>2017年福建省共有18.82万考生参加普通高考，共设87个考区，102个试卷保密室，199个考点，6566个考场。（数据来源：福建教育微言）。。。。。。</p></li>
+                <li><span><b>24</b><br/><em>2016.12</em></span>
+                <a href="" title="重磅！2017年全国招生计划公布，福建逾18万，确保录取率不降低！" target="_blank">重磅！2017年全国招生计划公布，福建逾18万，确保录取率不降低</a>
+                <p>近日，教育部印发了《关于做好2017年普通高等教育招生计划编制和管理工作的通知》（点击文末左下角“阅读原文”查看）。据通知内容。。。。。。</p></li>
+            </ul>
+		</div>
+        <div class="tab-bd">
+			<ul>
+			<li><span><b>11</b><br/><em>2017.01</em></span>
+			<a href="" title="厦门大学2017年本科招生“校园开放日”！六月，我在厦园等你！" target="_blank">厦门大学2017年本科招生“校园开放日”！六月，我在厦园等你！</a>
+			<p>中国有这样一批学校，他们的名字不分医学、语言、财经等类别，非常霸气地冠以当地省份的名称。对于这些大学，你了解吗？谁的实力最强呢？下面，...</p></li>
+			<li><span><b>11</b><br/><em>2017.01</em></span>
+			<a href="" title="盘点冠以省份头衔大学的实力！福建为何没有“福建大学”？" target="_blank">盘点冠以省份头衔大学的实力！福建为何没有“福建大学”？</a>
+			<p>中国有这样一批学校，他们的名字不分医学、语言、财经等类别，非常霸气地冠以当地省份的名称。对于这些大学，你了解吗？谁的实力最强呢？下面，我们就来细数一下我国冠以省份头衔大学的实力吧。。。</p></li>
+			<li><span><b>04</b><br/><em>2017.01</em></span>
+			<a href="" title="这些学生上大学免学费，免住宿费，还发生活费！凭什么？" target="_blank">这些学生上大学免学费，免住宿费，还发生活费！凭什么？</a>
+			<p>不用辛苦奔波找工作，免学费、免住宿费，还发生活费！哪有这么好的事？</p></li></ul>
+		</div>
+        <div class="tab-bd">
+			<ul>
+			<li><span><b>07</b><br/><em>2016.11</em></span>
+			<a href="" title="淘高考| 中国刚成立的这所大学！和国科大一样超厉害！" target="_blank">淘高考| 中国刚成立的这所大学！和国科大一样超厉害！</a>
+			<p>近日，教育部批准中国社会科学院、共青团中央关于申请创办中国社会科学院大学相关事项的请示和关于成立中国社会科学院大学的论证报告，同意创办中国社会科学院大学，并将于2017年秋季首次招生本科生！...</p></li>
+			<li><span><b>06</b><br/><em>2016.09</em></span>
+			<a href="" title="重磅 | 76所教育部直属管理高校分省解读！一文看懂！多少分能上？" target="_blank">重磅 | 76所教育部直属管理高校分省解读！一文看懂！多少分能上？</a>
+			<p>教育部2016年全国2595所普通高校名单中，共有76所教育部直属管理的高校。分布在全国18个省市区，涵盖了综合、工科、农业、林业、师范、语言、医药、财经、政法、艺术等类型院校。。。</p></li>
+			<li><span><b>06</b><br/><em>2016.09</em></span>
+			<a href="" title="淘高考 | 2017中国大学排行榜最新出炉！和你想的一样吗？" target="_blank">淘高考 | 2017中国大学排行榜最新出炉！和你想的一样吗？</a>
+			<p>艾瑞深中国校友会网《2017中国大学评价研究报告》公布最新2017中国大学排行榜700强，北京大学雄居榜首，连续10年蝉联冠军；清华大学第2，武汉大学第3，复旦大学第4，浙江大学第5。..</p></li></ul>
+		</div>
+        <div class="tab-bd">
+			<ul>
+			<li><span><b>11</b><br/><em>2017.01</em></span>
+			<a href="" title="厦门软件职业技术学院中澳合作办学，双文凭！ 直升澳洲读本科！" target="_blank">厦门软件职业技术学院中澳合作办学，双文凭！ 直升澳洲读本科！</a>
+			<p>近年来，国内学生选择出国留学的趋势越演愈烈，澳大利亚凭借其多方面优势吸引着越来越多的中国留学生。为了帮助学生实现赴澳留学深造的愿望，厦门软件职业技术学院携手澳大利亚时代教育集团及旗下澳大利亚华威学院在国内开展中澳合作。。。</p></li></ul>
+		</div>
+    </div>
+    <div class="DepartNav">
+        <img src="../../../../assets/images/pc-school02.png" />
+    </div>
+    <div class="clear"></div>
+</section>
+<div class="model_title">
+	<h1 class="top">专家团队 EXPERT TEAM</h1>
+	<h1 class="top2">---------------  专家把脉，不浪费孩子一分  ---------------</h1>
+	<div><a href="">更多专家 >></a></div>
+</div>
+
+<section class="BaseMark expertBase">
+	<!-- <div class="title"><span>知名专家</span></div>
+  	<div class="prevNext"><a class="prevBtn" href="javascript:;"></a><a class="nextBtn" href="javascript:;"></a></div>
+   <div class="prevNext"><p style="font-size:16px;">更多</p></div>
+    <div class="SearchBase" style="display:none">
+    	<div class="expertSearch"><a href="zhuanjia.html">按科室查看</a></div>
+    </div> -->
+    <div class="experts">
+		<ul data-num="0">
+		<li>
+			<div class="border-1">
+				<a href="" title="苏显敏" ><img src="../../../../assets/images/expert01.jpg" alt="苏显敏" width="238" height="218"></a>
+				<div class="txt">
+					<em>苏显敏</em>
+					<p>高考志愿资深规划师</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="border-1">
+				<a href="" title="范强" ><img src="../../../../assets/images/expert02.jpg" alt="范强" width="238" height="218">
+				</a>
+				<div class="txt">
+					<em>范强</em>
+					<p>淘高考微信公众号主编</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="border-1">
+				<a href="" title="刘漳辉" ><img src="../../../../assets/images/expert03.jpg" alt="刘漳辉" width="238" height="218"></a>
+				<div class="txt">
+					<em>刘漳辉</em>
+					<p>资深高考志愿填报专家</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="border-1">
+				<a href="" title="陈桐荔" ><img src="../../../../assets/images/expert04.jpg" alt="陈桐荔" width="238" height="218"></a>
+				<div class="txt">
+					<em>陈桐荔</em>
+					<p>资深高考志愿填报专家</p>
+				</div>
+			</div>
+		</li>
+		</ul>
+    </div>
+
+</section>
+<footer style="margin-top: 0px;">
+	<div class="footBase">
+		<!-- <h3>咨询电话：13600917747,13906006490,0592-2128000（上午8：00至12:00）（下午13:00至17:30）</h3> -->
+        <p>主办单位：淘高考  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：厦门火炬高新区软件园科讯楼6F-A3单元<br/>版权所有：厦门小蜜蜂大数据科技有限公司</p>
+        <div class="QRcode"><img src="../../../../assets/images/erwei.png" width="104" height="104"><br/>手机扫一扫关注淘高考官方微信</div>
+    </div>
+</footer>
+
 </div>
 </template>
 <script>
     import HomeJs from './Home.js';
-    import HTML5js from '../../../../assets/js/menuHTML5.min.js';
-    import LibraryJs from '../../../../assets/js/menulibrary.js';
-    import CommonJs from '../../../../assets/js/menu.common.js';
-    import IndexJs from '../../../../assets/js/menu.index.js';
+    
     export default HomeJs;
 </script>
 <style scoped>
