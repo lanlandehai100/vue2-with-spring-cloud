@@ -1,7 +1,9 @@
 package com.taoweilai.user.modules.base.entity;
 
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.taoweilai.user.common.persistence.BaseEntity;
 
+@TableName("user")
 public class User extends BaseEntity<User>{
 
 	private static final long serialVersionUID = 879580868328244477L;

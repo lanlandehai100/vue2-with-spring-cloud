@@ -155,7 +155,7 @@
             </li>
         </ul>
         </div>
-        <div class="office-pic pointer-cursor" onMouseOver="hiddenQRcodeView()" onMouseOut="hiddenQRcodeHidden()">
+        <div class="office-pic pointer-cursor">
         	<!-- <i></i> -->
         	<div class="office-pic-view"><img id="officePic" style="width:100%;height:100%" src="../../../../assets/images/twl-wx.jpg" /></div>
         	<div class="hidden-pic" id="hiddenPic"></div>
@@ -165,9 +165,9 @@
         <div class="clear"></div>
     </div>
 </nav>
-<el-carousel height="440px">
+<el-carousel height="351px">
     <el-carousel-item v-for="item in bannerPic" :key="item">
-    <img v-bind:src="item"  width="auto" height="440" alt="" />
+    <img v-bind:src="item"  width="auto" height="351" alt="" />
     </el-carousel-item>
 </el-carousel>
 
@@ -401,6 +401,7 @@
     
     export default HomeJs;
 </script>
+
 <style scoped>
     @import './normalize.css';
     @import './index.css';
