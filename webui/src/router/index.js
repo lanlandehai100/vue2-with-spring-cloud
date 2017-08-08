@@ -5,14 +5,15 @@ import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
 
-import {Home, Content} from 'layout/';
-import {Login} from 'views/';
+// import {Home, Content} from 'layout/';
+// import {Login} from 'views/';
 import tHome from 'views/modules/home/taoweilai/';
 
-import Adv from './adv/';
-import Function from './function/';
-import Demo from './demo/';
+// import Adv from './adv/';
+// import Function from './function/';
+// import Demo from './demo/';
 import components from './components/';
+import modules from './modules/';
 
 export default new Router({
 	routes: [
@@ -29,21 +30,23 @@ export default new Router({
 		// 	hidden   : true,
 		// 	component: Login
 		// },
-		{
-			path : '/',
-			name :	'微服务',
-			hidden : true,
-			component:tHome,
-		}, 
+		// {
+		// 	path : '/',
+		// 	name :	'微服务',
+		// 	hidden : true,
+		// 	component:tHome,
+		// }, 
 		// {
 		// 	path : '/taoweilai',
 		// 	name : '淘未来',
 		// 	hidden: true,
 		// 	component:tHome
 		// },
-		Function,
-		Demo,
+	//	Function,
+	//	Demo,
 		components,
-		Adv,
+	//	Adv,
+		modules.Home,
+		modules.User
 	]
 })

@@ -1,2 +1,2 @@
-import tRegister from "./register.vue"
-export default tRegister;
+import register from "./register.vue"
+export default register;

@@ -1,7 +1,7 @@
-import Register from './register';
-import Login from './Login';
+import Register from './register/';
+//import Login from './Login';
 
 export default {
-    Register,
-    Login
+    Register
+  //  Login
 };
