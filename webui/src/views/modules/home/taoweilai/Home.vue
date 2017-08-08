@@ -5,7 +5,7 @@
 	    <span>咨询电话：13600917747,13906006490,0592-2128000</span>
 	</div>
     <ul>
-        <li><a href="#" ><div class="registered">注册</div></a></li>
+        <li><a href="#/register" ><div class="registered">注册</div></a></li>
     	<li><a><div id="userLogin" class="load" data-toggle="modal" data-target="#myModal" data-backdrop="static">登录</div></a></li>
     </ul>
     <div class="searchBase">

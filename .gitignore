@@ -17,3 +17,4 @@ node_modules/
 .recommenders/
 webui/dist/
 microservice-webui/src/main/resources/static/dist/
+.vscode/settings.json

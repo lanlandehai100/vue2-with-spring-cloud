@@ -25,6 +25,13 @@ spring:
       testWhileIdle: true
       testOnBorrow: false
       testOnReturn: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-idle: 300
+      max-wait: 6000
+    
 mybatis-plus:
   mapper-locations: classpath:/mybatis/*Dao.xml
   typeAliasesPackage: com.taoweilai.modules.shop.entity

@@ -5,13 +5,14 @@
 //import {Home,Content} from 'layout/';
 
 import home from 'views/modules/home/taoweilai';
-import {modules} from 'views/';
+import user from './user';
+
 
 export default {
-	path: '/thome',
+	path: '/home',
 	name: 'taoweilai',
 	icon: 'inbox',
 	component: home,
 	redirect: '/modules/home/taoweilai',
-	children:[modules]
+	children:[user]
 };

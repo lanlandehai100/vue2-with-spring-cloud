@@ -33,15 +33,14 @@ export default new Router({
 			path : '/',
 			name :	'微服务',
 			hidden : true,
-			redirect(to){
-				return 'taoweilai';
-			}
-		}, {
-			path : '/taoweilai',
-			name : '淘未来',
-			hidden: true,
-			component:tHome
-		},
+			component:tHome,
+		}, 
+		// {
+		// 	path : '/taoweilai',
+		// 	name : '淘未来',
+		// 	hidden: true,
+		// 	component:tHome
+		// },
 		Function,
 		Demo,
 		components,

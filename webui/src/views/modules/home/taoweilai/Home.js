@@ -19,7 +19,7 @@ export default {
             var $obj=$t.find(".navboxBase");
            $obj.css({"left":-$t.offset().left+"px","width":$("body").width()});
             // if($IsLoser){
-                 $obj.fadeIn(580);
+                 $obj.slideDown(580);
             // }else{
             //     $obj.stop(true,false).fadeIn(588,"easeOutQuart");
             // }

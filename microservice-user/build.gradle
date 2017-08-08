@@ -44,6 +44,7 @@ dependencies {
 	compile('com.baomidou:mybatisplus-spring-boot-starter:1.0.4')
 	compile('com.baomidou:mybatis-plus:2.1.0')
 	compile('org.apache.velocity:velocity:1.7')
+	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
