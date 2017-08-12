@@ -16,6 +16,14 @@ public class BaseEntity<T extends Model> extends Model<T> {
 	protected Date updateDate;
 	protected String updateBy;
 	protected String delFlag;
+	
+	public BaseEntity(){
+		
+	}
+	
+	public BaseEntity(String id){
+		this.id = id;
+	}
 
 	public String getId() {
 		return id;

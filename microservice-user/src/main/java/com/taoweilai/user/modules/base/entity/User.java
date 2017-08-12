@@ -35,7 +35,7 @@ public class User extends BaseEntity<User>{
     private Double score;
     
     private Integer rank;
-
+    
 	public String getLoginName() {
 		return loginName;
 	}

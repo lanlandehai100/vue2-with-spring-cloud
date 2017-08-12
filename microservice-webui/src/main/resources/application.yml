@@ -1,4 +1,24 @@
 spring:
   profiles: dev
+  thymeleaf:
+    cache: false
 server:
     port: 8780
+---
+spring:
+  profiles: dev2
+  application:
+    name: webapi
+  thymeleaf:
+    cache: false
+    enabled: false
+server:
+    port: 8780
+logging:
+  level:
+    root: INFO
+    com.taoweilai.modules: DEBUG
+    com.taoweilai.common: DEBUG
+management:
+  security:
+    enabled: false

@@ -1,0 +1,33 @@
+.container{width:1200px;margin:0 auto;}
+.left-menu{float:left;width:186px;height:222px;border:1px solid #E1E1E1;margin-top:20px;}
+.left-menu .left-menu-nav{padding:5px;width: 176px;;background: #fff;z-index: 2;height:212px;line-height: 48px;}
+.pb-5{padding-bottom: 5px;}
+.nav-title{padding:10px 60px 10px 60px;height:20px;font-size:14px;color:#fff;background:#FE6B5A;font-weight: bold;}
+.right-body{padding:20px;margin-left:10%;margin-top:20px;overflow: hidden;margin-bottom: 20px;width:80%}
+.right-body .right-title{height: 24px;padding-bottom: 24px;border-bottom: 1px solid #e1e1e1;}
+.right-body .right-title a h1{float: left;padding-right:16px;margin-right:20px;font: normal 22px/24px "Microsoft Yahei", Simhei;color: #f70;}
+.right-body .right-title a h1:hover{float: left;padding-right:16px;margin-right:20px;font: normal 22px/24px "Microsoft Yahei", Simhei;color: #FF6600;}
+.right-content{height:115px;padding:15px 0px;border-bottom: 1px solid #e1e1e1;}
+.right-content .article-img{width:200px;height:115px;float:left;border:1px solid #e1e1e1;margin-right: 20px;}
+.right-content .article-img img{width:100%;height:100%}
+.right-content .article-title{font-size:16px;margin-bottom:10px;}
+.right-content .article-title a{font-weight: bold;}
+.right-content .article-content{padding: 10px 0;line-height: 22px;text-align: justify;color: #777;}
+.right-content .article-btn{color:#FE6B5A;font-size:14px;}
+.right-content .article-btn a{float:right;}
+.right-content .article-btn p{float:left;margin-right:20px;}
+
+.right-detail{margin-top: 20px;text-align: center;}
+.right-detail h3{margin-bottom: 10px;text-align:center;font: bold 24px/32px Microsoft Yahei;}
+.right-detail .detail-author{border-bottom: 1px solid #e1e1e1;margin-bottom: 15px;padding-bottom:15px;}
+.right-detail .detail-author p span{margin-right:5px;}
+.detail-content{font-size: 14px;line-height: 26px;text-align: justify;padding: 0 30px;}
+.detail-content div{margin-bottom:15px;}
+
+.detail-comment{margin-top:20px;}
+.detail-comment .prev{float:left;font-size: 14px;}
+.detail-comment .next{float:right;font-size: 14px;}
+.detail-comment .reply{padding: 10px 20px 0px;border: 1px solid #e1e1e1;margin-top: 4%;height: 217px;float: left;width: 906px;background:#f3f5f9}
+.detail-comment .reply textarea{width: 100%;height: 70%;border: 0;background: #fff;}
+.detail-comment .reply .reply-btn{width: 80px;font-size: 14px;height: 35px;line-height: 35px;text-align: center;color: #fff;background: #FE6B5A;border-radius: 10%;margin-top: 2%;float: right;}
+.detail-comment .reply .reply-btn:hover{width: 80px;font-size: 14px;height: 35px;line-height: 35px;text-align: center;color: #fff;background: #FE311B;border-radius: 10%;margin-top: 2%;float: right;}

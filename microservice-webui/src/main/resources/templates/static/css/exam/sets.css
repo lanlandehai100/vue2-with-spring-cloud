@@ -1,0 +1,48 @@
+
+label.sets-radio {
+	font-weight: 400;
+	padding: 0;
+	color: #656d78;
+	border-color: transparent;
+	background: 0 0;
+	box-shadow: none
+}
+
+label.sets-radio>.radio-icon {
+	font-size: 10px;
+	width: 20px;
+	text-align: center
+}
+
+label.check-box .check-icon,label.check-box>.btn .check-icon {
+	line-height: 20px
+}
+
+label.sets-radio input[type=radio] {
+	position: absolute;
+	clip: rect(0,0,0,0);
+	pointer-events: none
+}
+
+label.sets-radio.active>.radio-icon>i,label.sets-radio>.active>.radio-icon>i {
+	color: rgb(236, 88, 68)
+}
+
+label.sets-radio .radio-icon>i {
+	transition: color .1s ease-in-out 0s,opacity .1s ease-in-out 0s;
+	color: #afc6da
+}
+
+label.sets-radio .select {
+	font-size: 2em;
+	line-height: 20px;
+	display: inline-block;
+	height: 20px;
+	opacity: 0;
+	filter: alpha(opacity=0)
+}
+
+label.sets-radio.active .select,label.sets-radio>.active .select {
+	opacity: 1;
+	filter: alpha(opacity=100)
+}

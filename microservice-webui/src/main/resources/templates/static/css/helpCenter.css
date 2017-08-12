@@ -1,0 +1,313 @@
+.container{width:1200px;margin:0 auto}
+.searchques{margin-top: 10px;width:1200px;height:80px;border: 1px solid #e1e1e1;padding-top:25px;background:#FDFDFD}
+.searchques h2{width:300px;float:left;font-size:18px;font: 400 18px/28px Microsoft Yahei,Simhei;text-align: right;margin-right:20px;}
+.searchques input{width:474px;height:26px;line-height: 26px;float:left;padding:1px 10px;margin-right:20px;}
+.searchques .col-fff{color:#fff}
+.searchques .col-fff:hover{color:#fff}
+.searchques .col-fff .searchques-btn{width:124px;height:32px;background:#FE6B5A;margin-left: 70%;border-radius: 8%;line-height: 32px;text-align: center;font-size: 16px;}
+.searchques .col-fff .searchques-btn:hover{width:124px;height:32px;background:#FE311B;margin-left: 70%;border-radius: 8%;line-height: 32px;text-align: center;font-size: 16px;}
+.searchques .common-question{width: 1200px;height: 30px;padding-left: 27%; margin-top: 10px;color: #0081cc;font-size: 14px;}
+.searchques .common-question ul li{margin-right:20px;float:left;}
+.searchques .common-question ul li .col-0081cc{color: #FE6B5A;}
+
+.grid-row {
+	width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 40px
+}
+.grid-col-1 {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+	margin-bottom: 20px
+}
+.grid-col-2 {
+	float: left;
+	width: 930px;
+	margin-bottom: 20px
+}
+.helper-asideNav {
+	margin: 20px 0;
+	border: 1px solid #e1e1e1;
+	padding-top: 1px
+}
+
+.helper-asideNav .content {
+	padding: 0 30px 10px 30px;
+	overflow: hidden;
+	font-size:14px;
+}
+
+.helper-asideNav dl {
+	padding: 0 0;
+	border-top: 1px solid #e1e1e1;
+	margin-top: -1px
+}
+
+.helper-asideNav dt {
+	position: relative;
+	cursor: pointer;
+	padding: 10px
+}
+
+.helper-asideNav dt q {
+	float: right;
+	margin-right: -8px;
+	width: 17px;
+	height: 17px;
+	background: url(../../v4/sprite/g-icon-3.png) 3px -232px no-repeat
+}
+
+.helper-asideNav dt:hover {
+	cursor: pointer;
+	background-color: #f5f5f5
+}
+
+.helper-asideNav span {
+	display: block;
+	padding: 0 10px;
+	font-weight: bold;
+	line-height: 40px;
+	height: 40px;
+	position: relative;
+	border-top: 1px solid #e1e1e1;
+	margin-top: -1px
+}
+
+.helper-asideNav span:hover {
+	cursor: pointer;
+	background-color: #f5f5f5;
+	text-decoration: underline
+}
+
+.helper-asideNav span a {
+	color: #555
+}
+
+.helper-asideNav span q {
+	background: url(../../v4/sprite/g-icon-3.png) 5px -77px no-repeat;
+	float: right;
+	margin-right: -7px;
+	margin-top: 11px;
+	width: 17px;
+	height: 17px
+}
+
+.helper-asideNav dd {
+	display: none;
+	overflow: hidden;
+	padding: 9px
+}
+
+.helper-asideNav dd a {
+	display: block;
+	padding-top: 10px;
+	color: #555
+}
+
+.helper-asideNav dt {
+	font-weight: bold
+}
+
+.helper-asideNav dl.opened dt {
+	border-bottom: 1px solid #ff7700
+}
+
+.helper-asideNav dl.opened dt q {
+	background-position: 3px -286px
+}
+
+.helper-asideNav dl.opened dd {
+	display: block
+}
+.helper-index-content {
+	margin: 20px 0;
+	border: 1px solid #e1e1e1;
+	height:538px;
+}
+
+.helper-index-content .hotQuestion {
+	padding: 10px 0;
+	margin: 0 20px;
+	height:260px;
+}
+
+.helper-index-content h1 {
+	padding: 0 16px;
+	font-size: 22px;
+	line-height: 24px;
+	color: #f70;
+	background: url(../../v4/sprite/g-icon-3.png) 3px -202px no-repeat
+}
+
+.helper-index-content .hotQuestion .list {
+	padding: 20px 15px 30px 15px;
+	width: 703px
+}
+
+.helper-index-content .hotQuestion li {
+	float: left;
+	width: 351px;
+	overflow: hidden;
+	background: url(../sprite/base-icon-1.png) 0 14px no-repeat
+}
+
+.helper-index-content .hotQuestion li a {
+	display: block;
+	color: #555;
+	font-size: 14px;
+	padding: 8px 10px
+}
+
+.helper-index-content .self_service {
+	padding: 0px 0 50px 0;
+	margin: 0 20px
+}
+
+.helper-index-content .self_service .list {
+	padding-top: 30px
+}
+.helper-index-content .self_service .list .user-ques{
+	width: 700px;
+    height: 130px;
+    padding: 5px;
+    margin-left: 2%;
+}
+.helper-index-content .self_service .list .user-ques-btn{
+	width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #FE6B5A;
+    margin-left: 71%;
+    border-radius: 7%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.helper-index-content .self_service .list .user-ques-btn:hover{
+	width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #FE311B;
+    margin-left: 71%;
+    border-radius: 7%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.helper-index-content .self_service .list .user-ques-btn .col-fff{color:#fff}
+.helper-searchResult-detail {
+	margin: 20px 0;
+	border: 1px solid #e1e1e1;
+	height:500px;
+}
+
+.helper-searchResult-detail .hd {
+	padding: 18px 20px 14px;
+	border-bottom: 1px solid #e1e1e1
+}
+
+.helper-searchResult-detail .hd h1 {
+	padding: 0 16px;
+	font-size: 22px;
+	line-height: 24px;
+	color: #f70;
+	background: url(../sprite/base-icon-1.png) 0 -2660px no-repeat
+}
+
+.helper-searchResult-detail .bd {
+	margin: 0 35px;
+	padding-top: 20px;
+	padding-bottom: 40px
+}
+
+.helper-searchResult-detail .bd .title {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 40px;
+	text-align: center
+}
+
+.helper-searchResult-detail .bd .content {
+	font-size: 14px;
+	line-height: 26px;
+	padding: 20px 0 30px 0
+}
+
+.helper-searchResult-detail .bd .content a:hover {
+	text-decoration: none
+}
+
+.helper-searchResult-detail .bd .content p {
+	text-align: center;
+	text-align: center
+}
+
+.helper-searchResult-detail .bd .content .entry {
+	padding: 10px 90px 0
+}
+
+.helper-searchResult-detail .ft {
+	margin: 0 auto;
+	padding: 20px 0 30px 0;
+	width: 280px;
+	border-top: 1px dotted #ccc;
+	text-align: center;
+	font-size: 14px
+}
+
+.helper-searchResult-detail .ft .txt,.helper-list .ft .input {
+	padding-bottom: 20px;
+	color: #555
+}
+
+.helper-searchResult-detail .ft .reason .info {
+	color: #555;
+	font-size: 12px;
+	padding-bottom: 10px;
+	text-align: left;
+	padding-left: 60px
+}
+
+.helper-searchResult-detail .ft .reason .g-input-selectbox .w3 {
+	width: 158px
+}
+
+.helper-searchResult-detail .ft .entry {
+	padding: 10px 90px 0
+}
+
+.helper-searchResult-detail .ft .entry span {
+	width: 100%
+}
+
+.helper-searchResult-detail .otherInfo {
+	margin: 0 35px;
+	padding: 15px 0 20px 0;
+	border-top: 1px solid #ccc
+}
+
+.helper-searchResult-detail .otherInfo h3 {
+	padding-top: 5px;
+	padding-left: 15px;
+	font-size: 18px;
+	color: #606060
+}
+
+.helper-searchResult-detail .otherInfo .list {
+	padding: 15px
+}
+
+.helper-searchResult-detail .otherInfo li {
+	float: left;
+	width: 331px;
+	background: url(../sprite/base-icon-1.png) 0 14px no-repeat;
+	overflow: hidden
+}
+
+.helper-searchResult-detail .otherInfo li a {
+	color: #555;
+	font-size: 12px;
+	line-height: 24px;
+	padding-left: 10px
+}
