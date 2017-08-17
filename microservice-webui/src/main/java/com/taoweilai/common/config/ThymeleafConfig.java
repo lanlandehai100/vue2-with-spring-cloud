@@ -2,6 +2,7 @@ package com.taoweilai.common.config;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -28,6 +29,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdapter implements Applicat
 	private static final Logger logger = Logger.getLogger(ThymeleafConfig.class);
 
 	private static final String UTF8 = "UTF-8";
+	private static final boolean cacheable = false;
     private ApplicationContext applicationContext;
 
     private String[] array(String ...args) {
@@ -59,7 +61,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdapter implements Applicat
         templateResolver.setSuffix(".html");
         templateResolver.setCharacterEncoding(UTF8);
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCacheable(false);
+        templateResolver.setCacheable(cacheable);
         return templateResolver;
     }
     
@@ -76,7 +78,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdapter implements Applicat
     public ThymeleafViewResolver viewResolver(){
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
-        viewResolver.setCache(false);
+        viewResolver.setCache(cacheable);
         viewResolver.setContentType("text/html");
         viewResolver.setCharacterEncoding(UTF8);
         viewResolver.setViewNames(array("*.html"));

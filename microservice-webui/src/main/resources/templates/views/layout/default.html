@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">淘未来</title>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE" th:text="#{product_name}">淘未来</title>
     <script src="../../static/js/vue.min.js" th:src="@{/static/js/vue.min.js}"></script>
 	<script src="../../static/js/jquery/jquery-1.11.0.min.js" th:src="@{/static/js/jquery/jquery-1.11.0.min.js}"></script>
 	<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap/bootstrap.min.css" th:href="@{/static/css/bootstrap/bootstrap.min.css}">
