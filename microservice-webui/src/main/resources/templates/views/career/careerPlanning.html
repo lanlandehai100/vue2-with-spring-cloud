@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/default.html}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/static/css/careerPlan.css}" type="text/css" />
+</head>
+<body>
+<div layout:fragment="content" id="content">
+<div class="container">
+		<div class="header">
+			<div class="header-introduction">
+			<div class="header-introduction-content">
+			&nbsp;&nbsp;&nbsp;&nbsp;据统计，每年有70%大学生后悔当年选择的志愿。究其原因，都是因为当初选填报志愿的时候没有真正找到适合自己的专业。要解决这一问题，需要考生尽早了解自己的特点并发现真正适合自己的专业。
+淘高考联合权威测评机构，推出了专业倾向测评与霍兰德兴趣测评，帮你从性格与兴趣两方面深入了解自己的特点。 根据测评结果，可以为你的志愿选择及生涯规划提供科学的参考。</div>
+			</div>
+		</div>
+			<div class="body"  th:each="ct,ctStat : ${ctTitle}">
+				<div class="body-left">
+					<img src="../../static/images/test-pic01.jpg" th:src="@{/static/{imgUrl}(imgUrl=${ct.titleImg})}"/>
+				</div>
+				<div class="body-right">
+					<div class="body-title">[[${ct.titleName}]]</div>
+					<div class="body-content" th:title="${ct.titleDescript}" >&nbsp;&nbsp;&nbsp;&nbsp;[[${ct.titleDescript}]]</div>
+					<a class="col-fff" href="" th:href="@{/career/question/{id}(id=${ct.titleId})}"><div class="body-btn">进入测试</div></a>
+				</div>
+			</div>
+		<div style="margin-bottom: 30px;"></div>
+	</div>
+</div> 
+</body>
+</html>

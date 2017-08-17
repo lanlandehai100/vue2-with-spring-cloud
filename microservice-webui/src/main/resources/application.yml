@@ -2,6 +2,7 @@ spring:
   profiles: dev
   thymeleaf:
     cache: false
+    enabled: false
 server:
     port: 8780
 ---
@@ -13,7 +14,7 @@ spring:
     cache: false
     enabled: false
 server:
-    port: 8780
+    port: 8783
 logging:
   level:
     root: INFO

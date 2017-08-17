@@ -12,6 +12,8 @@
 	
 	<link rel="stylesheet" href="../../static/css/normalize.css" th:href="@{/static/css/normalize.css}" type="text/css" />
 	<link rel="stylesheet" href="index.css" th:href="@{/static/css/index.css}" type="text/css" />
+	<link href="../../static/css/register/register.css" th:href="@{/static/css/register/register.css}" rel="stylesheet">
+	<link href="../../static/css/register/gloab.css" th:href="@{/static/css/register/gloab.css}" rel="stylesheet">
 	<!--[if lt IE 9]><script type="text/javascript" src="../../static/js/Kunyi.Respond.min.js" th:src="@{/static/js/Kunyi.Respond.js}" ></script><![endif]-->
 	<script type="text/javascript" src="../../static/js/KunyiHTML5.min.js" th:src="@{/static/js/KunyiHTML5.min.js}"></script>
 	<script type="text/javascript" src="../../static/js/Kunyilibrary.js" th:src="@{/static/js/Kunyilibrary.js}"></script>
@@ -26,44 +28,44 @@
 		    	<div class="logo"><a href=""><img src="../../static/images/taoweilai.fw.png" th:src="@{/images/taoweilai.fw.png}"/></a></div>
 		    	<div class="ul">
 		        <ul>
-		        <li class="PMenu"><a href="${ctxCms}/" class="PAMenu">网站首页</a></li>
-		            <li class="PMenu"><a href="${ctxCms}/assessment/careerPlan" id="Nav_AMenu0" class="PAMenu" title="生涯规划" >生涯规划</a>
+		        <li class="PMenu"><a href="/" class="PAMenu">网站首页</a></li>
+		            <li class="PMenu"><a href="../career/careerPlanning.html"  th:href="@{/career/careerPlanning}" id="Nav_AMenu0" class="PAMenu" title="生涯规划" >生涯规划</a>
 		            	<div class="navboxBase">
 		            		<div class="navbox">
 		                        <div class="navMenus">
 		                            <ul>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=1" title="DISC测评" >DISC测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=2" title="4P测评" >4P测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=3" title="直观选择测评" >直观选择测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=4" title="能力选择测评" >能力选择测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=5" title="兴趣选择测评" >兴趣选择测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=6" title="能力倾向测评" >能力倾向测评</a></li>
-			                            <li><a class="testTitle" href="${ctxCms}/assessment/charactertest?titleId=7" title="霍兰德职业测评" >霍兰德职业测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/1}" title="DISC测评" >DISC测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/2}" title="4P测评" >4P测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/3}" title="直观选择测评" >直观选择测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/4}" title="能力选择测评" >能力选择测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/5}" title="兴趣选择测评" >兴趣选择测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/6}" title="能力倾向测评" >能力倾向测评</a></li>
+			                            <li><a class="testTitle" th:href="@{/career/question/7}" title="霍兰德职业测评" >霍兰德职业测评</a></li>
 		                            </ul>
 		                        </div>
 		                         <div class="nav_Menu01">
 		                              <dl>
 		                                <dt>DISC测评</dt>
 		                                <dd>
-		                                	<img src="../../static/images/test-pic01.jpg" th:src="@{images/test-pic01.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/test-pic01.jpg" th:src="@{/images/test-pic01.jpg}" width="260" height="130">
 		                                	<p>DISC性格测试从Dominance－支配性，Influence－影响性，Steady－稳健性，以及Compliance－服从性四个方面对性格特质进行了描述，进而了解测试者的个性特点，自我管理与情绪稳定等各方面情况。DISC性格测试的理论基础源于发明测谎仪的威廉马斯顿博士，他在1928年创立了DISC行为与语言的研究成果。包括24组描述个性特质的形容词，测试者要根据自己的第一感觉，从每组四个形容词中选出最适合自己形容词。</p>
-		                                	<a class="more testTitle" href="${ctxCms}/assessment/charactertest?titleId=1" >进入测评</a>
+		                                	<a class="more testTitle" th:href="@{/question/1}">进入测评</a>
 		                                </dd>
 		                              </dl>
 		                              <dl class="second">
 		                                <dt>4P测评</dt>
 		                                <dd>
-		                                	<img src="../../static/images/test-pic02.jpg" th:src="@{images/test-pic02.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/test-pic02.jpg" th:src="@{/images/test-pic02.jpg}" width="260" height="130">
 		                                    <p>性格测试你是Power力量型、Popular活泼型、Peace和平型还是Perfect完美型、Synergy综合统效型？只要在黄色区块上写上分数就会出来结果哦！</p>
-		                                	<a class="more testTitle" href="${ctxCms}/assessment/charactertest?titleId=2" >进入测评</a>
+		                                	<a class="more testTitle" th:href="@{/question/2}" >进入测评</a>
 		                                </dd>
 		                              </dl>
 		                              <dl>
 		                                <dt>霍兰德职业测评</dt>
 		                                <dd>
-		                                	<img src="../../static/images/test-pic03.jpg" th:src="@{images/test-pic03.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/test-pic03.jpg" th:src="@{/images/test-pic03.jpg}" width="260" height="130">
 		                                	<p>霍兰德职业兴趣自测(Self-Directed Search)是由美国职业指导专家霍兰德(John Holland)根据他本人大量的职业咨询经验及其职业类型理论编制的测评工具。霍兰德认为，个人职业兴趣特性与职业之间应有一种内在的对应关系。根据兴趣的不同，人格可分为研究型（I）、艺术型（A）、社会型（S）、企业型（E）、传统型（C）、现实型（R）六个维度，每个人的性格都是这六个维度的不同程度组合。</p>
-		                                	<a class="more testTitle" href="${ctxCms}/assessment/charactertest?titleId=7" >进入测评</a>
+		                                	<a class="more testTitle" th:href="@{/question/7}" >进入测评</a>
 		                                </dd>
 		                              </dl>
 		                        </div>
@@ -86,7 +88,7 @@
 		                              <dl>
 		                                <dt>智能志愿设计</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-znz.jpg" th:src="@{images/twl-znz.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-znz.jpg" th:src="@{/images/twl-znz.jpg}" width="260" height="130">
 		                                	<p>智能志愿设计，量身定制高考志愿</p>
 		                                	<a class="more testTitle" href="">详情</a>
 		                                </dd>
@@ -94,7 +96,7 @@
 		                              <dl class="second">
 		                                <dt>我能上的学校</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-sxx.jpg" th:src="@{images/twl-sxx.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-sxx.jpg" th:src="@{/images/twl-sxx.jpg}" width="260" height="130">
 		                                    <p>我能上的学校，根据分数搜索出可以上的学校</p>
 		                                	<a class="more testTitle" href="">详情</a>
 		                                </dd>
@@ -102,7 +104,7 @@
 		                              <dl>
 		                                <dt>志愿防撞车</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-fzc.jpg" th:src="@{images/twl-fzc.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-fzc.jpg" th:src="@{/images/twl-fzc.jpg}" width="260" height="130">
 		                                	<p>志愿防撞车。。。</p>
 		                                	<a class="more testTitle" href="">详情</a>
 		                                </dd>
@@ -127,7 +129,7 @@
 		                              <dl>
 		                                <dt>查院校数据</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-cyx.jpg" th:src="@{images/twl-cyx.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-cyx.jpg" th:src="@{/images/twl-cyx.jpg}" width="260" height="130">
 		                                	<p>查院校数据。。。</p>
 		                                	<a class="more" href="">详情</a>
 		                                </dd>
@@ -135,7 +137,7 @@
 		                              <dl class="second">
 		                                <dt>查艺术分数</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-cys.jpg" th:src="@{images/twl-cys.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-cys.jpg" th:src="@{/images/twl-cys.jpg}" width="260" height="130">
 		                                    <p>查艺术分数。。。</p>
 		                                	<a class="more" href="">详情</a>
 		                                </dd>
@@ -143,7 +145,7 @@
 		                              <dl>
 		                                <dt>查专业数据</dt>
 		                                <dd>
-		                                	<img src="../../static/images/twl-czy.jpg" th:src="@{images/twl-czy.jpg}" width="260" height="130">
+		                                	<img src="../../static/images/twl-czy.jpg" th:src="@{/images/twl-czy.jpg}" width="260" height="130">
 		                                	<p>查专业数据。。。</p>
 		                                	<a class="more" href="">详情</a>
 		                                </dd>
@@ -162,18 +164,89 @@
 		      </div>
 		      <div class="office-pic pointer-cursor" onMouseOver="hiddenQRcodeView()" onMouseOut="hiddenQRcodeHidden()">
 		    	<!-- <i></i> -->
-		    	<div class="office-pic-view"><img id="officePic" style="width:100%;height:100%" src="../../static/images/twl-wx.jpg" th:src="@{images/twl-wx.jpg}"/></div>
+		    	<div class="office-pic-view"><img id="officePic" style="width:100%;height:100%" src="../../static/images/twl-wx.jpg" th:src="@{/images/twl-wx.jpg}"/></div>
 		    	<div class="hidden-pic" id="hiddenPic"></div>
-		    	<div class="hidden-QRcode" id="hiddenQRcode"><img style="width:100%;height:100%" src="../../static/images/erwei.png" th:src="@{images/erwei.png}" />
+		    	<div class="hidden-QRcode" id="hiddenQRcode"><img style="width:100%;height:100%" src="../../static/images/erwei.png" th:src="@{/images/erwei.png}" />
 		    	</div>
 		    </div>
 		    <div class="clear"></div>
 		</div>
 		    
 		</nav>
-      <div layout:fragment="content">
+      <div layout:fragment="content" id="content">
       		
       </div>
     <div th:replace="fragments/footer.html :: footer">&copy; 2014 The Static Templates</div>
-  </body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="top:20%">
+	<div class="modal-dialog" style="margin:30px auto;width:600px;">
+		<div class="modal-content">
+			<div class="modal-header" style="text-align:center;color: #fff;background: #FE6B5A;">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					会员登录
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="login-box">
+					<div class="main-login bgf">    
+				    	<div class="reg-box-pan-login display-inline"> 
+				        	<div class="reg-box" id="verifyCheck">
+				            	<div class="part1">                	
+				                    <div class="item">
+				                        <span class="intelligent-label" style="display:block;width:78px;height:34px;padding: 0;"><b class="ftx04">*</b>用户名：</span>    
+				                        <div class="f-fl item-ifo">
+				                            <input type="text" maxlength="20" name="loginName" class="txt03 f-r3 required" tabindex="1" id="adminNum" style="box-sizing: content-box;"/>
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <span class="intelligent-label" style="display:block;width:64px;height:34px;padding: 0;"><b class="ftx04">*</b>密码：</span>    
+				                        <div class="f-fl item-ifo">
+				                            <input onclick="" type="password" id="passwords" name="passwords" maxlength="20" class="txt03 f-r3 required" tabindex="3" style="ime-mode:disabled;box-sizing: content-box;" onpaste="return  false" autocomplete="off" /> 
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <span class="intelligent-label" style="display:block" id="msg">&nbsp;</span>    
+				                        <div class="f-fl item-ifo" style="width:290px;">
+				                           <a href="javascript:;" class="btn btn-red f-r3" id="login" style="width:290px;">登录</a>                     
+				                        </div>
+				                    </div> 
+				                </div>
+				            </div>
+				           <!-- </form>  -->
+				        </div>
+				    </div>
+				</div>
+				<div class="part4">
+					<a href="" style="margin-right:10%"><span>忘记密码?</span></a>
+					<a href="${ctxCms}/register"><span>立即注册</span></a>
+				</div>
+			</div>
+			<!-- <div class="modal-footer">
+				<button type="button" class="btn btn-primary">
+					提交更改
+				</button>
+			</div> -->
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	 $("#login").click(function (){
+		$.post("/login",{name:$("#adminNum").val(),password:$("#passwords").val()},function(data){
+			if(data.status == 200){
+				$("#myModal").hide();
+				document.getElementById("msg").innerHTML="";
+				location.reload();
+			}
+			if(data.status != 200){
+				$("#passwords").val("");
+				 document.getElementById("msg").innerHTML=data.message;
+			}
+		});
+	});
+});
+</script>
+</body>
 </html>

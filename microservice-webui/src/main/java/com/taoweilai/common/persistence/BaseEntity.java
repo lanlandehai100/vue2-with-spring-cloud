@@ -16,9 +16,9 @@ public abstract class BaseEntity<T> implements Serializable {
 	 */
 	protected String id;
 	
-	protected User createBy;
+	protected String createBy;
 	
-	protected User updateBy;
+	protected String updateBy;
 	
 	protected Date createDate;
 	
@@ -62,20 +62,20 @@ public abstract class BaseEntity<T> implements Serializable {
 	}
 
 	@JSONField(serialize=false)
-	public User getCreateBy() {
+	public String getCreateBy() {
 		return createBy;
 	}
 
-	public void setCreateBy(User createBy) {
+	public void setCreateBy(String createBy) {
 		this.createBy = createBy;
 	}
 
 	@JSONField(serialize=false)
-	public User getUpdateBy() {
+	public String getUpdateBy() {
 		return updateBy;
 	}
 
-	public void setUpdateBy(User updateBy) {
+	public void setUpdateBy(String updateBy) {
 		this.updateBy = updateBy;
 	}
 

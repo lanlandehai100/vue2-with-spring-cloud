@@ -279,7 +279,7 @@
     line-height: 42px;
 }
 
-.audio {
+/* .audio {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -288,7 +288,7 @@
     height: 220px;
     text-align: center;
     margin: 0px auto;
-}
+} */
 
 .audio .media-record-time {
     height: 60px;
@@ -329,7 +329,7 @@
     margin: 12px auto;
 }
 
-.video {
+/* .video {
     background: #999;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -339,7 +339,7 @@
     height: 306px;
     text-align: center;
     margin: 0px auto;
-}
+} */
 
 .video-media-record-time {
     color: #9aaac4;
@@ -755,12 +755,12 @@ label.question-point {
     background: #fff;
 }
 
-#content {
+/* #content {
     margin-left: 51% !important;
     margin-left: 51%;
     height: 500px;
     background: #fff;
-}
+} */
 
 .mt89 {
     margin-top: 89px;

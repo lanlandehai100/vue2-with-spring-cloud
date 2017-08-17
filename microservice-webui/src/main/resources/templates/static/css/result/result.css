@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.report-map{margin-left:10%;width:1200px;margin-bottom:20px;}
+.report-map .report-map-left{float: left;width: 600px;height: 500px;}
+.result-description{margin-left:20%;margin-right:20%;float:left;margin-bottom:20px;}
+.result-description .result-title{font-size: 20px;color: #FE6B5A;margin-bottom: 10px;}
+.result-content .result-subdirectory{margin-bottom:10px;border-bottom:1px solid #ddd;}
+.detail-title{font-size: 18px;margin-bottom: -15px;}
+.detail-content{font-size:16px;margin-bottom:10px;letter-spacing: 2px;}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/default.html}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="../../static/css/result/result.css" th:href="@{/static/css/result/result.css}" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="content" id="content">
+	<div class="content" style="padding: 0 10%;">
+	<div style="background-image:url('../../static/images/test.jpg');width:1227px;height:597px;background-size: 100% 100%;margin-left: 10%;">
+		<div id="main" style="width:1200px;height:600px;color:#FE6B5A"></div>
+	</div>
+	
+	<div class="report-map">
+		<div class="report-map-left" id="reportMapLift"></div>
+		<div class="report-map-left" id="reportMapRight"></div>
+	</div>
+	<div class="result-description">
+		<div class="result-title">综上所述，你的综合兴趣为AIS类型</div>
+		<ul class="result-content">
+			<li class="result-subdirectory">
+				<div class="detail-title">1. A(艺术型)</div>
+				<div class="detail-content">
+				<br /><strong>人格特征：</strong>分析、谨慎、批评、好奇、独立、聪明、内向、条理、谦逊、精确、理发、保守
+				<br /><strong>行为表现：</strong>1、喜爱研究性的职业或情境，避免企业性的职业或情境。2、用研究的能力解决工作及其他方面的问题，即自觉、好学、自信，重视科学，但缺乏领导方面的才能。
+				<br /><strong>看重：</strong>重视科学
+				<br /><strong>擅长：</strong>探讨思想，使用计算机，独立工作，学习新的领域，解决问题，做实验，阅读科学或技术类杂志，分析数据
+				</div>
+			</li>
+			<li class="result-subdirectory">
+				<div class="detail-title">1. A(艺术型)</div>
+				<div class="detail-content">
+				<br /><strong>人格特征：</strong>分析、谨慎、批评、好奇、独立、聪明、内向、条理、谦逊、精确、理发、保守
+				<br /><strong>行为表现：</strong>1、喜爱研究性的职业或情境，避免企业性的职业或情境。2、用研究的能力解决工作及其他方面的问题，即自觉、好学、自信，重视科学，但缺乏领导方面的才能。
+				<br /><strong>看重：</strong>重视科学
+				<br /><strong>擅长：</strong>探讨思想，使用计算机，独立工作，学习新的领域，解决问题，做实验，阅读科学或技术类杂志，分析数据
+				</div>
+			</li>
+			<li class="result-subdirectory">
+				<div class="detail-title">1. A(艺术型)</div>
+				<div class="detail-content">
+				<br /><strong>人格特征：</strong>分析、谨慎、批评、好奇、独立、聪明、内向、条理、谦逊、精确、理发、保守
+				<br /><strong>行为表现：</strong>1、喜爱研究性的职业或情境，避免企业性的职业或情境。2、用研究的能力解决工作及其他方面的问题，即自觉、好学、自信，重视科学，但缺乏领导方面的才能。
+				<br /><strong>看重：</strong>重视科学
+				<br /><strong>擅长：</strong>探讨思想，使用计算机，独立工作，学习新的领域，解决问题，做实验，阅读科学或技术类杂志，分析数据
+				</div>
+			</li>
+		</ul>
+	</div>
+	</div>
+	
+<script src="../../static/js/echarts.min.js" th:src="@{/static/js/echarts.min.js}"></script>
+<script type="text/javascript">
+	var myChart = echarts.init(document.getElementById('main'));
+
+	var x = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+	var y = ['1','2','3','4','5','6'];
+
+	var a=[2,1,'你好'];
+	var b=[5,4,'hello'];
+	var c=[1,5,'test1'];
+	var d=[0,5,'test2'];
+	var e=[3,7,'test3'];
+	var f=[4,9,'test4'];
+	var data = [a,b,c,d,e,f];
+
+	/* var data = [
+		<c:forEach items="${resultProfession}" var="r" varStatus="idx">
+			[${r.yCoordinate},${r.xCoordinate},'${r.professionCode}+${r.professionName}'],
+		</c:forEach>
+	]; */
+	
+	option = {
+	    title: {
+	        text: '适合专业'
+	    },
+	    legend: {
+	        data: ['Punch Card'],
+	        left: 'right'
+	    },
+	    polar: {},
+	    tooltip: {
+	        formatter: function (params) {
+	            return params.value[2] + ' y is ' + y[params.value[0]] + ' x is ' + x[params.value[1]] ;
+	            
+	        }
+	    },
+	    angleAxis: {
+	        type: 'category',
+	        data: x,
+	        boundaryGap: false,
+	        show: false,
+	        axisLine: {
+	            show: false
+	        }
+	    },
+	    radiusAxis: {
+	        type: 'category',
+	        data: y,
+	        show: false
+	    },
+	    series: [{
+	        name: 'Punch Card',
+	        type: 'scatter',
+	        coordinateSystem: 'polar',
+	        symbolSize: 10,
+	        data: data,
+	        animationDelay: function (idx) {
+	            return idx * 5;
+	        }
+	    }]
+	};
+	myChart.setOption(option);
+	
+</script>
+<script type="text/javascript">
+	var myChart = echarts.init(document.getElementById('reportMapLift'));
+	option = {
+		title:{
+			text:"你的性格测试得分："
+		},
+		tooltip: {
+	        trigger: 'axis'
+	    },
+		radar:{
+            indicator: [
+                {name: '研究型', max: 100},
+                {name: '艺术型', max: 100},
+                {name: '社会型', max: 100},
+                {name: '企业型', max: 100},
+                {name: '传统型', max: 100},
+                {name: '现实型', max: 100}
+            ],
+            center: ['50%','50%'], //位置
+            radius: 150 //大小 
+		},
+		series:[{
+	        type: 'radar',
+	        tooltip: {
+                trigger: 'item'
+            },
+	        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+	        data : [
+	            {
+                     value: [60,73,85,40,50,30],
+                     name:'莫软件'
+	            }
+	        ]
+		}]
+	};
+	myChart.setOption(option);
+</script>
+<script>
+	var myChart = echarts.init(document.getElementById('reportMapRight'));
+	
+	option = {
+		    color: ['#3398DB'],
+		    tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+		    grid: {
+		        left: '20%',
+		        right: '20%',
+		        bottom: '20%',
+		        top:'20%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : ['研究型', '艺术型', '社会型', '企业型', '传统型', '现实型'],
+		            axisTick: {
+		                alignWithLabel: true
+		            }
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'直接访问',
+		            type:'bar',
+		            barWidth: '60%',
+		            data:[10, 52, 200, 334, 390, 330]
+		        }
+		    ]
+		};
+	myChart.setOption(option);
+</script>
+</div>
+</body>
+</html>

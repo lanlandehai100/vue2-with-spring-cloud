@@ -25,7 +25,7 @@ a{color:#505050;text-decoration:none;outline:0;outline-width:0px;transition:all 
 a:visited{text-decoration:none;outline:0; outline-width:0px;}
 a:active{text-decoration:none;outline:0; outline-width:0px;}
 a:hover {outline:0; outline-width:0px;}
-/*缁熶竴涓婃爣鍜屼笅鏍�/
+/*缂佺喍绔存稉濠冪垼閸滃奔绗呴弽锟�/
 .sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}   
 .sup {top: -0.5em;}   
 .sub {bottom: -0.25em;} 
@@ -57,7 +57,7 @@ header ul li{ float:right; margin-right:11px;}
 header .searchBase{ width:262px; height:25px; background:#ededed; border:1px solid #cccccc; border-radius:17px; position:absolute; right:250px; top:7px;}
 header .searchBase input{ height:25px; background:none; border:none;}
 header .searchBase input.search{ background:url(../images/search.png) center center no-repeat; width:39px; float:left; cursor:pointer;}
-header .searchBase input.searchword{ width:200px; color:#999; font-family:"Microsoft YaHei"; line-height:34px;font-size:12px;}
+header .searchBase input.searchword{ width:200px; color:#999; font-family:"Microsoft YaHei"; line-height:27px;font-size:12px;}
 header .phone span{top:10px;position:absolute;width:330px; height:30px; position:absolute; z-index:2;left:0;color:#2d94cb!important;font-size: 12px;}
 .load{height:25px;width:35px;line-height:25px;text-align:center;background:#FE6B5A;color:#fff;border-radius: 20%;border: 1px solid #fff;font-size: 12px;}
 .load:hover{height:25px;width:35px;line-height:25px;text-align:center;background:#fff;color:#FE6B5A;border-radius: 20%;border: 1px solid #b7837a;font-size: 12px;}
@@ -70,7 +70,7 @@ nav .nav .PMenu{ height:80px; line-height:80px; float:left; font-size:16px; over
 nav .nav .PAMenu{ display:block;padding:0px 34px; text-align:center;color:#FFF;}
 nav .nav .PMenu:hover,nav .nav .PMenu.current{ background:#FE311B;}
 nav .logo{height: 42px; width:108px;margin-top:1.5%;float:left;}
-nav .logo a img{width:100%;height:100%}
+nav .logo a img{width:100%;height:42px;}
 nav .ul{height:80px;width:880px;float:left;margin-left: 2%;}
 nav .office-pic{margin-left: 11%;	width:50px;height:50px;float:left;margin-top:1%;border-radius: 50%;position:relative;}
 nav .office-pic i{display: block;position: absolute;left: 43%;top: 45%;width: 35px;height: 25px;background-position: -73px 0;margin-left: -13px;margin-top: -10px;background: url(http://cdn.stc.gaokaopai.com/Static/images/spring_icon.png) no-repeat;}

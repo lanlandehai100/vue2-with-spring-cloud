@@ -147,7 +147,7 @@
 .back .com-m{color:#fff;padding:20px 10px;font-size:12px;position:relative}
 .back .com-m p{margin-bottom:20px;}
 .back .com-m a{display: block;border: 1px solid #fff;width: 130px;height: 24px;color: #fff;font-size: 12px;text-align: center;line-height: 24px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;position: absolute;bottom: -8px;left: 50%;margin-left: -68px;}
-
+/*
 @media all and (min-width: 1300px) and (max-width:1400px){
 	.quickMenu{ width:120px;}
 	.quickMenu .title{ display:none;}
@@ -170,7 +170,7 @@
 	.indexNews .DepartNav ul a{ width:83px;}
 	.indexNews .DepartNav ul a em{ margin-right:4px;}
 }
-/*
+
 @media all and (min-width: 1280px) and (max-width:1580px){
 }
 @media all and (min-width: 1581px) and (max-width:3840px){

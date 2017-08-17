@@ -13,8 +13,16 @@
 	  $(".testTitle").click(function(){
 	    $(".navboxBase").hide();
 	  });
+	  $(window).resize();
 	});
-	
+	$(window).resize(function(){
+	       var client_height = $(window).height();
+	       var header_height = $('header').height();
+	       var footer_height = $('footer').height();
+	       var nav_height = $('nav').height();                
+	       var container_height = client_height-header_height-footer_height-nav_height;
+	       $('#content').css('min-height', container_height + 'px');
+	});
 	function hiddenQRcodeView(){
 		document.getElementById('hiddenQRcode').style.display='block';
 		document.getElementById('hiddenPic').style.display='block';
@@ -34,13 +42,13 @@
 <div class="phone">
 <span>咨询电话：13600917747,13906006490,0592-2128000</span>
 </div>
-   <ul>
+   <ul style="box-sizing: content-box;">
    	<!-- <c:if test="${not empty user}">
    		<li><a onclick="logout()"><div class="load">退出</div></a></li>
    		<li style="font-size:14px;margin-top: 3%;"><a href="${ctx}/userCenter">${user.loginName}</a></li>
    	</c:if> -->
    	<!-- <c:if test="${empty user}"> -->
-   	<li><a href="${ctxCms}/register" ><div class="registered">注册</div></a></li>
+   	<li><a href="../login/register" th:href="@{/goregister}" ><div class="registered">注册</div></a></li>
    	<li><a><div id="userLogin" class="load" data-toggle="modal" data-target="#myModal" data-backdrop="static">登录</div></a></li>
    	<!-- <li><a href="${ctxCms}/login"><div class="load">登录</div></a></li> -->
    	<!-- </c:if> -->

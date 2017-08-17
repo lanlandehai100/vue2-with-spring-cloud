@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.4.RELEASE'
+		springBootVersion = '1.5.6.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -36,14 +36,16 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	compile('org.springframework.cloud:spring-cloud-starter-feign')
 	compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('com.auth0:java-jwt:3.2.0')
 	compile('com.alibaba:fastjson:1.2.31')
 	//添加模板引擎
-	compile("org.thymeleaf:thymeleaf:3.0.2.RELEASE")
-	compile("org.thymeleaf:thymeleaf-spring4:3.0.2.RELEASE")
+	compile("org.thymeleaf:thymeleaf:3.0.7.RELEASE")
+	compile("org.thymeleaf:thymeleaf-spring4:3.0.7.RELEASE")
 	compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.1.1")
 	compile group: 'nl.bitwalker', name: 'UserAgentUtils', version: '1.2.4'
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+	compile group: 'net.sf.json-lib', name: 'json-lib', version: '2.4'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

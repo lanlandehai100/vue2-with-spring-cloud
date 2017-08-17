@@ -1,45 +1,40 @@
 package com.taoweilai.common.utils;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 
-import com.alibaba.fastjson.JSON;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.taoweilai.common.persistence.User;
 
 public class JwtUtils {
 	public static Logger logger = LoggerFactory.getLogger(JwtUtils.class);
-	public static String createAndSignToken(String userName, String pwd) throws IllegalArgumentException, UnsupportedEncodingException{
-	    Algorithm algorithm = Algorithm.HMAC256("secret");
-	    Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.SECOND,60 ); //特定时间的年后
-        Date date = calendar.getTime();
-	    String token = JWT.create()
-	        .withIssuer("auth0")
-	        .withExpiresAt(calendar.getTime())
-	        .withClaim("userName", userName)
-	        .withClaim("password", pwd)
-	        .sign(algorithm);
-	    return token;
-	}
+	static final long EXPIRATIONTIME = 432_000_000;     // 5天
+	static final String SECRET = "P@secret01m";            // JWT密码
+	static final String TOKEN_PREFIX = "Bearer";        // Token前缀
+    static final String HEADER_STRING = "Authorization";// 存放Token的Header Key
 	
-	public static String createAndSignToken(User user) throws IllegalArgumentException, UnsupportedEncodingException{
-	    Algorithm algorithm = Algorithm.HMAC256("secret");
-	    Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.SECOND,60 ); //特定时间的年后
-        Date date = calendar.getTime();
+	public static String createAndSignToken(String userName) throws IllegalArgumentException, UnsupportedEncodingException{
+	    Algorithm algorithm = Algorithm.HMAC256(SECRET);
 	    String token = JWT.create()
+	    	.withClaim("authorities", "ROLE_ADMIN,AUTH_WRITE")
+	    	.withSubject(userName)
 	        .withIssuer("auth0")
-	        .withExpiresAt(calendar.getTime())
-	        .withClaim("user", JSON.toJSONString(user))
+	        .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATIONTIME))
+	        .withClaim("userName", userName)
 	        .sign(algorithm);
+	    
 	    return token;
 	}
 	
@@ -57,16 +52,23 @@ public class JwtUtils {
 	    return jwt;
 	}
 	
-	public static void main(String[] args){
-		try {
-			String token = createAndSignToken("ljh","1234560");
-			logger.debug("tocken:"+token);
-			DecodedJWT jwt = JWT.decode(token);
-			logger.debug("username:"+jwt.getClaim("userName").asString()+";password:"+jwt.getClaim("password").asString());
-			verifyToken(token);
-		} catch (IllegalArgumentException | UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	// JWT验证方法
+	public static Authentication getAuthentication(HttpServletRequest request) {
+        // 从Header中拿到token
+        String token = CookieUtils.getCookie(request, "token");
+        
+        if (token != null) {
+            // 解析 Token
+        	DecodedJWT jwt = decode(token);
+        	// 拿用户名
+            String user = jwt.getSubject();
+            // 得到 权限（角色）
+            List<GrantedAuthority> authorities =  AuthorityUtils.commaSeparatedStringToAuthorityList(jwt.getClaim("authorities").toString());
+            // 返回验证令牌
+            return user != null ?
+                    new UsernamePasswordAuthenticationToken(user, null, authorities) :
+                    null;
+        }
+        return null;
+    }
 }

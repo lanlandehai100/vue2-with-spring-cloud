@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.taogaokao.assessment.modules.Base.dao.CtQuestionDao" >  
+      
+    <select id="findAllList" resultType="CtQuestion">
+    	select *
+    	from ct_question
+    	where title_id = #{titleId}
+    </select>
+      
+</mapper>

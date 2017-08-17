@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/default.html}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="../../static/css/exam/exam.css" th:href="@{/static/css/exam/exam.css}" rel="stylesheet">
+<link href="../../static/css/exam/sets.css" th:href="@{/static/css/exam/sets.css}" rel="stylesheet">
+<link href="../../static/css/question.css" th:href="@{/static/css/question.css}" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="content" id="content">
+<div id="title" class ="contact-section" style="background: none 0px 0px repeat scroll rgb(240, 240, 240);">
+		<div class="container">
+			<div class="contact">
+			<h3 class="wow bounceIn" data-wow-delay="0.4s">[[${ctTitle.titleName}]]</h3>
+			<p class="wow fadeInUpBig animated" data-wow-delay="0.4s" style="text-align:left;">[[${ctTitle.titleDescript}]]</p>
+			</div>
+		</div>
+	</div>
+	<div id="qus" style="background: none 0px 0px repeat scroll rgb(240, 240, 240);background-color: rgb(240, 240, 240);">
+	<div id="exam" class="main-content">
+	<div id="exam-examing" style="display: block;">
+	<div id="startButton" class="container" style="display:block;">
+		<div class="contact">
+			<h3 class="wow bounceIn" data-wow-delay="0.4s" style="color: #EC5844;"></h3>
+			<input id="startTest" type="submit" value="开始测评" onclick="startTest()">
+			<h3 class="wow bounceIn" data-wow-delay="0.4s" style="color: #EC5844;"></h3>
+		</div>
+	</div>
+	<div class="questionContainer container" >
+        <div style="display: none;" v-for="(question,qidx) in questions" :id="qidx">
+			<div class="row">
+		        <div class="col-xs-1"></div>
+		        <div class="col-xs-10 question-title">
+		        </div>
+		        <div class="col-xs-1"></div>
+		    </div>
+    
+		    <div class="select">
+		        <div class="row">
+		            <div class="col-xs-1"></div>
+		            <div class="col-xs-10 question-title">
+		            <label style="color: #EC5844;">{{question.questionName}}</label>
+		            <label class="question-index"><span class="numb_index">{{question.questionNo}}</span>/<span class="numb_total">{{questionCnt}}</span></label></div>
+		            <div class="col-xs-1"></div>
+		        </div>
+		        
+		        <div class="row" v-for="(option,idx) in question.options">
+		        	<div class="col-xs-1"></div>
+		            <div class="col-xs-10" @click="clearOption(question,option);nextQ(qidx)">
+		                <div v-bind:class="[option.optionClass1, option.optionClass1Active]">
+		                    <label v-bind:class="[option.optionClass2, option.optionClass2Active]">
+			                    <span class="question-option fa-stack radio-icon">
+			                    <i class="fa fa-circle-thin fa-stack-2x" style="top:2px"></i>
+			                    <i class="fa fa-dot-circle-o fa-stack-1x select" style="top:2px"></i>
+			                    <input type="radio" name="option" class="radioOption">
+			                    </span>
+			                    <span class="option-index">{{idx + 1}}</span>
+			                    <div class="question-option-label">{{option.optionName}}</div>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="col-xs-1"></div>
+		    	</div>
+			</div>
+			
+			<div class="row">
+		        <div class="col-xs-1"></div>
+		        <div class="col-xs-10 question-title">
+		        </div>
+		        <div class="col-xs-1"></div>
+		    </div>
+		</div>
+	</div>
+	<div id="submitButton" class="container" style="display:none;">
+		<div class="contact">
+			<h3 class="wow bounceIn" data-wow-delay="0.4s" style="color: #EC5844;">答题结束，是否提交</h3>
+			<input id="restart" type="submit" value="重新开始" onclick="history.go(0);" />
+			<input style="background:#5ED15F;" id="submitBtn" type="submit" value="提交测评" v-on:click="commit()" />
+			<h3 class="wow bounceIn" data-wow-delay="0.4s" style="color: #EC5844;"></h3>
+		</div>
+	</div>
+	<div class="questionOperate" style="display: none;top:500px;">
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-warning btn-answer-doubt" style="display: inline-block;">标记</script>
+            </button>
+            <button id="exam-prev-btn" type="button" class="btn btn-default exam-prev-btn first" disabled="disabled" v-on:click="preQuestion()">上一题
+            </button>
+            <button id="exam-next-btn" type="button" class="btn btn-primary exam-next-btn last" style="background-color: #EC5844;border-color: #EC5844;" data-placement="left" v-on:click="nextQuestion()">
+                	下一题
+            </button>
+            <button id="exam-submit-btn" type="button" class="btn btn-primary exam-next-btn last" style="display:none;background-color: #EC5844;border-color: #EC5844;" data-placement="left" v-on:click="commit()">
+                	提交
+            </button>
+            <a class="mr10 btn btn-link  btn-review-answer pt30" style="display: none;">查看答案</script></a>
+
+        </div>
+    </div>
+	</div>
+	</div>
+	</div>
+	<div style="display:none">
+	<form:form id="searchForm" modelAttribute="ctTitle" action="${ctxCms}/assessment/result" method="POST">
+		<form:hidden path="squestions"/>
+	</form:form>
+	</div>
+	<script>
+	var data =  eval("([[${data}]])".split("&quot;").join('"'));
+	data.questionCnt = data.questions.length;
+	var curQId = 0;
+	var cur = data.questions[0];
+	for(var j=0 ; j < data.questions.length;j++){
+		var currentQuestion = data.questions[j];
+		for(var i = 0 ; i<currentQuestion.options.length;i++){
+			currentQuestion.options[i].optionClass1="option";
+			currentQuestion.options[i].optionClass2="radio-inline sets-radio";
+			currentQuestion.options[i].optionClass1Active="";
+			currentQuestion.options[i].optionClass2Active="";
+		}
+	}
+	
+	 var app = new Vue({
+		  el: '#qus',
+		  data: data,
+		  methods: {
+			  //选中答案
+			  clearOption:function(question,option){
+				  for(var i in question.options){
+					  question.options[i].optionClass1Active='';
+					  question.options[i].optionClass2Active='';
+					  question.score = 0;
+				  }
+				  option.optionClass1Active='focus';option.optionClass2Active='active';
+				  question.score = option.score;
+				  question.optionType = option.optionType;
+				  question.optionName = option.optionName;
+				  question.optionId = option.optionId
+				  
+				  for(var j in this.questions){
+					  if(this.questions[j].questionNo == question.questionNo){
+						  data.questions[j] = question;
+					  }
+				  }
+			  },
+			  nextQ:function(qidx){
+				  	curQId = qidx + 1;
+				  	
+				  	for(var i in data.questions){
+						document.getElementById(i).style.display="none";
+					}
+				  	
+				  	if(curQId == data.questions.length){
+				  		document.getElementById("submitButton").style.display="block";
+				  		$('html,body').animate({scrollTop:$('.contact-section').offset().top},1000);
+				  		$(window).resize();
+				  		$('#qus').css('min-height', '708px');
+				  		return;
+				  	}
+					document.getElementById(curQId).style.display="block";
+					$(window).resize();
+			  },
+			  nextQuestion:function(){
+				  document.getElementById("exam-prev-btn").disabled = '';
+				  for(var i in data.questions){
+					if(document.getElementById(i).style.display=="block"){
+						document.getElementById(i).style.display="none";
+						document.getElementById(parseInt(i)+1).style.display="block";
+						if(parseInt(i)+1 == data.questions.length-1){
+							document.getElementById("exam-next-btn").disabled = "disabled";
+							canSubmit();
+						}
+						$(window).resize();
+						break;
+					}
+				  }
+			  },
+			  preQuestion:function(){
+				  for(var i in data.questions){
+					if(document.getElementById(i).style.display=="block"){
+						document.getElementById(i).style.display="none";
+						document.getElementById(parseInt(i)-1).style.display="block";
+						if(i-1==0){
+							document.getElementById("exam-prev-btn").disabled = 'disabled';
+						}
+						document.getElementById("exam-next-btn").disabled = "";
+						//document.getElementById("exam-submit-btn").style.display = "none";
+						canSubmit();
+						$(window).resize();
+						break;
+					}
+				  }
+			  },
+			  commit:function(){
+				  $("#squestions").val(JSON.stringify(data));
+				  $("#searchForm").submit();		  
+			  }
+		  }
+		});
+	
+	function canSubmit(){
+		document.getElementById("exam-submit-btn").style.display = "block"
+	}
+	
+	 function startTest(){
+		document.getElementById('0').style.display='block';
+		$('#startTest').hide();
+		$('html,body').animate({scrollTop:$('#qus').offset().top},1000);
+		$("#title").hide();
+		$(window).resize();
+	} 
+	$(document).ready(function() {
+		$(window).resize();
+	});
+	$(window).resize(function(){
+		
+		var client_height = $(window).height();
+        var header_height = $('header').height();
+        /* var menu_height = $('.contact-section').height(); */
+        var nav_height = $('nav').height();
+        var footer_height = $('footer').height();
+        var title_height = $('#title').height();
+        var qus_height = client_height-header_height-nav_height-footer_height-title_height;
+        if(document.getElementById("title").style.display=="none"){
+        	$('#qus').css('min-height', qus_height + title_height + 'px');
+        }else{
+        	$('#qus').css('min-height', qus_height + 'px');
+        }
+	});
+	</script>
+</div>
+</body>
+</html>

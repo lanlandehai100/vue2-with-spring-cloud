@@ -32,10 +32,16 @@ public class UserController {
 		}
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/get/{id}")
 	public User findById(@PathVariable String id) {
 		User findOne = this.userService.get(id);
 	    return findOne;
+	}
+	
+	@GetMapping("/findUserByLoginName/{loginName}")
+	public User findUserByLoginName(@PathVariable String loginName){
+		User findOne = this.userService.getByLoginName(loginName);
+		return findOne;
 	}
 	
 }
